@@ -1,0 +1,17 @@
+let duration = 10;
+function StartTimer(seconds) {
+    let Timer = seconds;
+    const display = document.getElementById("timer");
+    
+    const Interval = setInterval(() => {
+        display.textContent = Timer;
+        Timer--;
+        if (Timer < 0) {
+            clearInterval(Interval)
+        }
+    }, 1000);       
+    
+    
+}
+
+StartTimer(duration);
